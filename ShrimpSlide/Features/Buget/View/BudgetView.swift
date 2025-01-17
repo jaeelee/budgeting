@@ -28,6 +28,12 @@ struct BudgetView: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack{
+                    Text("예산")
+                }
+                Text("\(budget)원")
+                    .background(.red)
+
                 // 여기에 예산 관련 내용을 표시
                 TextField("예산을 입력하세요", text: $budget)
                     .keyboardType(.numberPad)
