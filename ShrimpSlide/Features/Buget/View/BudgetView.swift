@@ -143,7 +143,7 @@ struct BudgetView: View {
                         }
                     }
                 }
-            }  
+            }.padding()
            
         }
     }

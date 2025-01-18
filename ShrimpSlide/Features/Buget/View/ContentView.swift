@@ -19,7 +19,6 @@ struct ContentView: View {
         VStack(spacing: 20) {
             BudgetView(showDatePicker: $showDatePicker)
         }
-        .padding()
         .sheet(isPresented: $showDatePicker) {
             NavigationView {
                     VStack {
