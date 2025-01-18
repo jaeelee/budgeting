@@ -32,7 +32,7 @@ struct BudgetView: View {
                     Text("예산")
                 }
                 Text("\(budget)원")
-                    .background(.red)
+                    .background(.blue)
 
                 // 여기에 예산 관련 내용을 표시
                 TextField("예산을 입력하세요", text: $budget)
