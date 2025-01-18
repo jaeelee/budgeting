@@ -19,6 +19,7 @@ struct BudgetView: View {
     @State private var isEditing: Bool = false
 
     @State private var budget: String = ""
+    @State private var budget1: Int = 0
     @State private var formattedBudget: String = ""
 
     @State private var expenseItemList: [String] = []
@@ -27,12 +28,22 @@ struct BudgetView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                HStack{
+            VStack(alignment: .leading) {
+                HStack {
                     Text("예산")
+                    
+                    Spacer()
+                    
+                    NavigationLink{
+                        BudgetSettingsView()
+                    }label:{
+                        Text("설정")
+                    }
                 }
-                Text("\(budget)원")
-                    .background(.blue)
+                .padding(.bottom, 5)
+                
+                Text("\(budget1.formattedWithCommas) 원")
+                    .font(.system(size: 20))
 
                 // 여기에 예산 관련 내용을 표시
                 TextField("예산을 입력하세요", text: $budget)
